@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Uso - Rock Consultas Bot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Reset Básico e Configurações Globais --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000000; /* Preto puro */
+            color: #FFFFFF; /* Texto branco puro */
+            line-height: 1.7; /* Mais espaçamento para leitura */
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* --- Cores e Variáveis (para fácil ajuste) --- */
+        :root {
+            --primary-blue: #00CFFF; /* Azul neon da logo */
+            --dark-background: #0A0A0A; /* Fundo para seções/cards */
+            --light-text: #E0E0E0;
+            --white-text: #FFFFFF;
+        }
+
+        /* --- Estrutura Principal --- */
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background-color: var(--dark-background);
+            border-radius: 12px;
+            box-shadow: 0 0 40px rgba(0, 207, 255, 0.15); /* Sombra azul neon sutil */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- Cabeçalho --- */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #050505;
+            border-bottom: 1px solid #1A1A1A;
+        }
+
+        .header img {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 25px;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(0, 207, 255, 0.4);
+        }
+
+        .header h1 {
+            color: var(--white-text);
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(0, 207, 255, 0.7);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        
+        /* --- Conteúdo Principal (Termos) --- */
+        main {
+            padding: 40px;
+            flex-grow: 1;
+        }
+
+        .terms-content {
+            background-color: #121212;
+            border-radius: 10px;
+            padding: 30px;
+            border: 1px solid #222;
+        }
+
+        .terms-content h2 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #333;
+        }
+
+        .terms-content p, .terms-content li {
+            color: var(--light-text);
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+        
+        .terms-content strong {
+            color: var(--white-text);
+            font-weight: 700;
+        }
+        
+        .terms-content ul {
+            list-style-position: inside;
+            padding-left: 10px;
+        }
+
+        /* --- Rodapé --- */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #050505;
+            border-top: 1px solid #1A1A1A;
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        .footer p {
+            margin-bottom: 8px;
+        }
+
+        .footer a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--white-text);
+            text-decoration: underline;
+        }
+
+        /* --- Design Responsivo --- */
+        
+        /* Tablets */
+        @media (max-width: 768px) {
+            main {
+                padding: 30px;
+            }
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            .terms-content {
+                padding: 25px;
+            }
+            .terms-content h2 {
+                font-size: 1.6rem;
+            }
+            .terms-content p, .terms-content li {
+                font-size: 1rem;
+            }
+        }
+
+        /* Celulares */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            main {
+                padding: 20px;
+            }
+            .header {
+                padding: 25px 15px;
+            }
+            .header img {
+                max-width: 140px;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+            .header p {
+                font-size: 0.95rem;
+            }
+            .terms-content {
+                padding: 20px;
+            }
+            .terms-content h2 {
+                font-size: 1.4rem;
+            }
+            .terms-content p, .terms-content li {
+                font-size: 0.95rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="header">
+            <img src="https://i.ibb.co/2rxp0vR/photo-2025-11-08-03-16-48.jpg" alt="Logo Rock Consultas Bot">
+            <h1>Termos de Uso e Serviço</h1>
+            <p>Última atualização: 14 de Novembro de 2025</p>
+        </header>
+
+        <main>
+            <div class="terms-content">
+                <p><strong>Ao utilizar este bot, você concorda automaticamente com os termos abaixo.</strong></p>
+
+                <h2>1. Finalidade do Serviço</h2>
+                <p>Este bot oferece consultas de dados obtidos de fontes públicas ou autorizadas. As informações retornadas têm caráter informativo e podem variar de acordo com a disponibilidade e atualização das fontes consultadas.</p>
+
+                <h2>2. Responsabilidade do Usuário</h2>
+                <ul>
+                    <li>O usuário é inteiramente responsável pelo uso das informações obtidas.</li>
+                    <li>É proibido utilizar o serviço para qualquer fim ilegal, imoral ou que viole direitos de terceiros.</li>
+                    <li>Qualquer uso irregular é de responsabilidade exclusiva do usuário.</li>
+                </ul>
+
+                <h2>3. Pedidos de Estorno Direto no Banco (MED)</h2>
+                <p>Caso o usuário realize pedido de reembolso diretamente pelo banco (MED), ou tente contestar o pagamento alegando cobrança indevida após ter utilizado o serviço, a conta será <strong>desativada permanentemente</strong>. Nesses casos, <strong>não haverá direito a reembolso</strong>, independentemente do motivo apresentado. Esta medida visa proteger o serviço contra tentativas de fraude ou má-fé.</p>
+
+                <h2>4. LGPD – Tratamento de Dados</h2>
+                <p>Este serviço opera em conformidade com a <strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018)</strong>. Nenhum dado consultado é armazenado de forma permanente ou repassado a terceiros. O bot funciona apenas como intermediador de consultas, não coletando para uso próprio dados pessoais dos usuários ou consultados, exceto quando estritamente necessário e com base legal adequada.</p>
+
+                <h2>5. Política de Reembolso</h2>
+                <p>O reembolso <strong>só será realizado se o usuário não tiver utilizado o serviço nenhuma vez</strong> após o pagamento. Se qualquer consulta tiver sido feita, <strong>o reembolso não será possível</strong>. Solicitações de reembolso devem ser realizadas diretamente com o suporte dentro de 7 dias após o pagamento.</p>
+
+                <h2>6. Aceitação dos Termos</h2>
+                <p>Ao utilizar o bot, o usuário confirma que leu e concorda com todos os termos acima. Caso não concorde, deve interromper imediatamente o uso do serviço.</p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Dúvidas, sugestões ou suporte técnico?</p>
+            <p>Fale com nosso administrador: <a href="https://t.me/zephyr008" target="_blank">@zephyr008</a></p>
+            <p>&copy; 2023-2025 <a href="https://t.me/rockconsultasgratisbot" target="_blank">@rockconsultasgratisbot</a>. Todos os direitos reservados.</p>
+        </footer>
+
+    </div>
+</body>
+</html>
