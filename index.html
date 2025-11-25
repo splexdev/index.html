@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Termos de Uso - Rock Consultas Bot</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     
     <style>
-        /* --- Reset Básico e Configurações Globais --- */
         * {
             margin: 0;
             padding: 0;
@@ -20,71 +19,141 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #000000; /* Preto puro */
-            color: #FFFFFF; /* Texto branco puro */
-            line-height: 1.7; /* Mais espaçamento para leitura */
+            background-color: #000000;
+            color: #FFFFFF;
+            line-height: 1.7;
             padding: 20px;
             display: flex;
             justify-content: center;
             min-height: 100vh;
         }
 
-        /* --- Cores e Variáveis (para fácil ajuste) --- */
         :root {
-            --primary-blue: #00CFFF; /* Azul neon da logo */
-            --dark-background: #0A0A0A; /* Fundo para seções/cards */
+            --primary-blue: #00CFFF;
+            --dark-background: #0A0A0A;
             --light-text: #E0E0E0;
             --white-text: #FFFFFF;
         }
 
-        /* --- Estrutura Principal --- */
         .container {
             max-width: 900px;
             width: 100%;
             background-color: var(--dark-background);
             border-radius: 12px;
-            box-shadow: 0 0 40px rgba(0, 207, 255, 0.15); /* Sombra azul neon sutil */
+            box-shadow: 0 0 40px rgba(0, 207, 255, 0.15);
             overflow: hidden;
             display: flex;
             flex-direction: column;
         }
 
-        /* --- Cabeçalho --- */
-        .header {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: #050505;
+        .banner {
+            position: relative;
+            background: radial-gradient(circle at 30% 50%, #1a1a40 0%, #000000 100%);
+            padding: 60px 40px;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             border-bottom: 1px solid #1A1A1A;
         }
 
-        .header img {
-            max-width: 180px;
-            height: auto;
-            margin-bottom: 25px;
-            border-radius: 20px;
-            box-shadow: 0 0 25px rgba(0, 207, 255, 0.4);
+        .banner-bg-icon {
+            position: absolute;
+            opacity: 0.05;
+            stroke: #fff;
+            fill: none;
+            stroke-width: 2;
+            z-index: 0;
         }
 
-        .header h1 {
-            color: var(--white-text);
-            font-size: 3rem;
+        .bg-glass-1 {
+            top: -20px;
+            left: 20%;
+            width: 100px;
+            height: 100px;
+            transform: rotate(-15deg);
+        }
+
+        .bg-glass-2 {
+            bottom: -30px;
+            right: 30%;
+            width: 150px;
+            height: 150px;
+            transform: rotate(15deg);
+        }
+
+        .banner-content {
+            z-index: 1;
+            max-width: 60%;
+        }
+
+        .banner-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
             font-weight: 700;
+            color: white;
+            line-height: 1.1;
             margin-bottom: 15px;
-            text-shadow: 0 0 10px rgba(0, 207, 255, 0.7);
         }
 
-        .header p {
+        .banner-subtitle {
             font-size: 1.2rem;
-            color: var(--light-text);
-            max-width: 600px;
-            margin: 0 auto;
+            color: #E0E0E0;
+            margin-bottom: 20px;
             font-weight: 300;
         }
-        
-        /* --- Conteúdo Principal (Termos) --- */
+
+        .telegram-link {
+            display: inline-flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            background: rgba(0, 136, 204, 0.2);
+            padding: 8px 16px;
+            border-radius: 50px;
+            border: 1px solid rgba(0, 136, 204, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .telegram-link:hover {
+            background: rgba(0, 136, 204, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .telegram-icon {
+            width: 24px;
+            height: 24px;
+            fill: #0088cc;
+            margin-right: 10px;
+        }
+
+        .banner-graphic {
+            z-index: 1;
+            width: 200px;
+            height: auto;
+            filter: drop-shadow(0 0 15px rgba(100, 100, 255, 0.3));
+        }
+
         main {
             padding: 40px;
             flex-grow: 1;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--white-text);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .last-update {
+            text-align: center;
+            color: #888;
+            margin-bottom: 40px;
+            font-size: 0.9rem;
         }
 
         .terms-content {
@@ -121,7 +190,6 @@
             padding-left: 10px;
         }
 
-        /* --- Rodapé --- */
         .footer {
             text-align: center;
             padding: 30px;
@@ -146,72 +214,102 @@
             color: var(--white-text);
             text-decoration: underline;
         }
-
-        /* --- Design Responsivo --- */
         
-        /* Tablets */
         @media (max-width: 768px) {
+            .banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 20px;
+            }
+            .banner-content {
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+            .banner-title {
+                font-size: 2.5rem;
+            }
+            .banner-graphic {
+                width: 150px;
+            }
             main {
                 padding: 30px;
-            }
-            .header h1 {
-                font-size: 2.5rem;
             }
             .terms-content {
                 padding: 25px;
             }
-            .terms-content h2 {
-                font-size: 1.6rem;
-            }
-            .terms-content p, .terms-content li {
-                font-size: 1rem;
-            }
         }
 
-        /* Celulares */
         @media (max-width: 480px) {
             body {
                 padding: 10px;
             }
-            main {
-                padding: 20px;
-            }
-            .header {
-                padding: 25px 15px;
-            }
-            .header img {
-                max-width: 140px;
-            }
-            .header h1 {
+            .banner-title {
                 font-size: 2rem;
             }
-            .header p {
-                font-size: 0.95rem;
+            main {
+                padding: 20px;
             }
             .terms-content {
                 padding: 20px;
             }
-            .terms-content h2 {
-                font-size: 1.4rem;
-            }
-            .terms-content p, .terms-content li {
-                font-size: 0.95rem;
-            }
         }
-
     </style>
 </head>
 <body>
 
     <div class="container">
         
-        <header class="header">
-            <img src="https://i.ibb.co/2rxp0vR/photo-2025-11-08-03-16-48.jpg" alt="Logo Rock Consultas Bot">
-            <h1>Termos de Uso e Serviço</h1>
-            <p>Última atualização: 14 de Novembro de 2025</p>
-        </header>
+        <div class="banner">
+            <svg class="banner-bg-icon bg-glass-1" viewBox="0 0 24 24">
+                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 21L16.65 16.65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg class="banner-bg-icon bg-glass-2" viewBox="0 0 24 24">
+                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 21L16.65 16.65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            <div class="banner-content">
+                <div class="banner-title">Rock<br>Consultas</div>
+                <div class="banner-subtitle">Soluções inteligentes em<br>consultas e análises de dados</div>
+                <a href="https://t.me/rockconsultasgratisbot" target="_blank" class="telegram-link">
+                    <svg class="telegram-icon" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.29-.48.79-.74 3.08-1.34 5.15-2.23 6.21-2.66 3.03-1.23 3.66-1.44 4.07-1.44.09 0 .28.02.41.12.11.08.14.19.15.26v.06z"/>
+                    </svg>
+                    t.me/rockconsultasgratisbot
+                </a>
+            </div>
+
+            <div class="banner-graphic-container">
+                <svg class="banner-graphic" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="paperGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#7c82ff;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#4a50c0;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <g transform="translate(20, 20) rotate(-5)">
+                        <rect x="10" y="10" width="140" height="100" rx="2" fill="#333366" stroke="#5555aa" stroke-width="2"/>
+                        <rect x="5" y="5" width="140" height="100" rx="2" fill="#444488" stroke="#6666cc" stroke-width="2"/>
+                        <rect x="0" y="0" width="140" height="100" rx="2" fill="url(#paperGrad)" stroke="#aaccff" stroke-width="1.5"/>
+                        
+                        <rect x="15" y="15" width="40" height="35" fill="rgba(255,255,255,0.2)"/>
+                        <rect x="65" y="15" width="60" height="8" rx="2" fill="rgba(255,255,255,0.3)"/>
+                        <rect x="65" y="28" width="60" height="4" rx="1" fill="rgba(255,255,255,0.2)"/>
+                        <rect x="65" y="36" width="50" height="4" rx="1" fill="rgba(255,255,255,0.2)"/>
+                        
+                        <rect x="15" y="60" width="110" height="4" rx="1" fill="rgba(255,255,255,0.2)"/>
+                        <rect x="15" y="70" width="110" height="4" rx="1" fill="rgba(255,255,255,0.2)"/>
+                        <rect x="15" y="80" width="80" height="4" rx="1" fill="rgba(255,255,255,0.2)"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
 
         <main>
+            <h1 class="section-title">Termos de Uso e Serviço</h1>
+            <p class="last-update">Última atualização: 14 de Novembro de 2025</p>
+
             <div class="terms-content">
                 <p><strong>Ao utilizar este bot, você concorda automaticamente com os termos abaixo.</strong></p>
 
